@@ -145,11 +145,18 @@ document.getElementById('repeat-button').addEventListener('click',repeatMyParam)
 
     Outside of your new function, select the button with the id "query-button" and add a click event listener that calls your function.
 */
+// PROBLEM 10 
+/*
+    In the function that you wrote for Problem 8, change the URL to test a couple different scenarios. 
 
+    1: Send no queries on the URL -- what happened? 
+
+    2: Send more than 1 query on the URL -- what happened? 
+*/
 // CODE HERE
 
 let queer = () => {
-    axios.get('http://localhost:3000/query-test?query=queer_test&&query=yay')
+    axios.get('http://localhost:3000/query-test?query1=queer_test&&quer2=yay')
     .then(res => console.log(res.data))
 }
 
