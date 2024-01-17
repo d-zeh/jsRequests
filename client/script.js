@@ -106,6 +106,9 @@ const repeatMyParam = () => {
     //YOUR CODE HERE
     axios.get('http://localhost:3000/repeat/Some-String')
     .then(res => {
+        let repeatEl = document.getElementById('repeat-text');
+    repeatEl.textContent = res.data;
+    repeatEl.style.display = 'block';
         console.log(res.data)
     })
 }
@@ -136,6 +139,12 @@ document.getElementById('repeat-button').addEventListener('click',repeatMyParam)
 
 // CODE HERE
 
+let queer = () => {
+    axios.get('http://localhost:3000/query-test?query=queer_test&&query=yay')
+    .then(res => console.log(res.data))
+}
+
+document.getElementById('query-button').addEventListener('click',queer)
 
 
 ////////////////
